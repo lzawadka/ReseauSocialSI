@@ -1,7 +1,6 @@
 <?php
-session_start();
-require_once "../global/function.php";
-require "../config/bdd.php";
+
+require __DIR__ . '/../config/bootstrap.php';
 //Traitement du formulaire de connexion
 if (isset($_POST['identifiant']) || isset($_POST['password'])) {
     $req = $bdd->prepare(
@@ -20,7 +19,7 @@ if (isset($_POST['identifiant']) || isset($_POST['password'])) {
     if(!$user) {
         // Si aucun utilisateur n'a été trouvé
         echo 'Aucun utilisateur trouvé';
-    } elseif(($_POST['password']!== $user['password_user'])) {
+    } elseif(password_verify($_POST['password']!== $user['password_user'])) {
         // Si le mot de passe est incorrect
         echo 'Mot de passe incorrect';
     } else {
@@ -40,24 +39,35 @@ if (isset($_GET['logout'])) {
     unset($_SESSION['pseudo']);
     echo 'Vous avez bien été déconnecté';
 }
-
-
 ?>
 
-<div class="container border nt-4 p-4">
-    <h1>Connexion</h1>
-
-
-
-    <form action="login.php" method="post">
-        <div class="form-group">
-            <label>Email / Pseudo</label>
-            <input type="text" name="identifiant" class="form-control">
+<head>
+<link href="../style/reset.css" rel="stylesheet"/>
+<link href="../style/login.css" rel="stylesheet"/>
+</head>
+    <div class="page__login">
+        <div class="container__login">
+            <div class="form_title">
+                <h1>LOGIN</h1>
+            </div>
+            <form class="login__form" action="/../Projets/reseauSocial/login/login.php" method="post">
+                <div class="form-group">
+                    <label>Email or Username :</label>
+                    <input type="text" name="identifiant" class="form-control" maxlength="10">
+                </div>
+                <div class="form-group">
+                    <label>Password :</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                    <input type="submit" name="login" class="btn btn-primary">
+                </form>
+                <div>
+                    <p class="signin">Not member yet ? <a href="/../Projets/reseauSocial/login/inscription.php">Sign in</a></p>
+                </div>
         </div>
-        <div class="form-group">
-            <label>Mot de passe</label>
-            <input type="password" name="password" class="form-control">
-        </div>
-        <input type="submit" name="login" class="btn btn-primary">
-    </form>
-</div>
+    </div>
+
+
+
+        
+   

@@ -1,12 +1,6 @@
-<!DOCTYPE html lang="fr"> 
-   <head> 
-      <title>PHP</title> 
-      <meta charset="utf-8" /> 
-   </head> 
-<body> 
 <?php 
 // Connexion à la base de données
-require "../config/bdd.php";
+include "../global/header.php";
 
 // Prépare la requête
 $prepare = $bdd->prepare('INSERT INTO commentaires (id_post ,auteur_commentaire, contenu_commentaire, date_commentaire) VALUES ( :idPost , :auteurCom ,:contenuCom, NOW() )');
@@ -19,9 +13,7 @@ $prepare->bindValue(':idPost', $_GET['post']);
 // Execute la requête
 $exec = $prepare->execute();
 
+header('Location: blog.php');
 echo 'Votre commentaire à bien été posté';
 
 ?> 
-<a href="commentaires.php?post= <?= $_GET['post'] ?>">retour au post</a> 
-</body> 
-</html>

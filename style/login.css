@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,700,700i&display=swap');
+.page__login {
+  background-image: url(/Projets/reseauSocial/assets/img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__login {
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 550px;
+  border-radius: 0.5rem;
+}
+
+
+
+h1 {
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 40px;
+}
+
+.signin {
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-size: 13px;
+  color: white;
+}
+
+label {
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #FCD307;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border: 1px solid white;
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 60px;
+  margin-top: 10%;
+  font-family: 'Raleway';
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(151, 126, 0);
+  background-color: #FCD307;
+  border: none;
+  border-radius: 2px;
+  
+}
+
+input[type=text] {
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  padding-left: 10px;
+  background-color: black;
+  color: white;
+  
+}
+
+input[type=submit]:hover {
+  transform: scale(1.03);
+  transition: 0.2s linear;
+}
+
+input[type=password] {
+  color: black;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  border-radius: 2px;
+  padding-left: 10px;
+}
+
+.form_title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+}
+
+.signin {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+
+/* INSCRIPTION PAGE */
+

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,700,700i&display=swap');
+body {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.left__signup {
+  background: url(/Projets/reseauSocial/assets/img/background_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.right__signup{
+  width: 50vw;
+  height: 100vh;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  flex-direction: column;
+}
+.formulary {
+  display: flex;
+  flex-direction: column;
+}
+.row__name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+      padding-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 70px;
+}
+
+.signin {
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-size: 13px;
+  color: white;
+}
+
+label {
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #FCD307;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: black;
+}
+
+input[type=submit] {
+  width: 50%;
+  height: 40px;
+  margin-top: 5%;
+  font-family: 'Raleway';
+  font-weight: bold;
+  color: white;
+  margin-left: 20%; 
+  margin-right: 20%;
+  background-color: #FCD307;
+  border: none;
+
+
+}
+
+input[type=text] {
+  color: black;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+input[type=password] {
+  color: black;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+input[type=email] {
+  color: black;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+}

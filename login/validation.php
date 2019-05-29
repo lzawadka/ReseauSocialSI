@@ -1,9 +1,5 @@
-<a href="inscription.php">Retour</a>
-<hr>
 <?php
-
-
-require "../config/bdd.php";
+include "../global/header.php";
 
 //echo '<pre>' . print_r($_POST, true) . '</pre>';
 
@@ -40,13 +36,14 @@ if (!isset($_POST['ajouter'])){
 
     } else {
 
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $req = $bdd->prepare('INSERT INTO utilisateur(name_user, surname_user, pseudo_user, email_user, password_user) VALUES(:name, :surname, :pseudo, :email, :password)');
 
         $req->bindValue(':name', $_POST['nom']);
         $req->bindValue(':surname', $_POST['prenom']);
         $req->bindValue(':pseudo', $_POST['pseudo']);
         $req->bindValue(':email', $_POST['email']);
-        $req->bindValue(':password', $_POST['password']);
+        $req->bindValue(':password', $password);
 
         $exec = $req->execute();
 
@@ -56,3 +53,7 @@ if (!isset($_POST['ajouter'])){
         header('Location: login.php');
     }
 }
+?>
+
+
+<a href="inscription.php">Retour</a>
